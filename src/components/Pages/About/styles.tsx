@@ -9,7 +9,7 @@ width: 100%;
 export const Left=styled('div')`
 width: 50%;
 height: calc(90vh);
-background-image: url("/static/img/about/rectangle.png");
+background-image: url("/static/img/about/Rectangle.png");
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
