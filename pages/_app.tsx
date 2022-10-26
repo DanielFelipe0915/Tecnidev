@@ -8,6 +8,7 @@ import Router from "next/router";
 import "nprogress/nprogress.css";
 import NProgress from "nprogress";
 import createEmotionCache from "../src/config/cache/createEmotionCache";
+import { Analytics } from '@vercel/analytics/react';
 
 Router.events.on("routeChangeStart", (url: any) => {
   console.log(url);
@@ -35,6 +36,7 @@ export default function MyApp(props: MyAppProps) {
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
         <Component {...pageProps} />
+        <Analytics/>
       </ThemeProvider>
     </CacheProvider>
   );
