@@ -1,4 +1,5 @@
 import { styled } from "@mui/material";
+import { getMaxBreakPoint } from "../../../utils/StyledUtil";
 
 export const Component = styled("div")`
   width: 100%;
@@ -26,16 +27,23 @@ export const Title = styled("div")`
     color: ${({ theme }) => theme.palette.primary.main};
     font-size: 2.6em;
     font-weight: 700;
+    @media (max-width: ${({theme})=> getMaxBreakPoint(theme, 'sm')}) {
+      font-size: 1.6em;
+}
   }
   & .subtitle {
     margin: 0.8rem 0;
     font-size: 1.3em;
   }
+  @media (max-width: ${({theme})=> getMaxBreakPoint(theme, 'sm')}) {
+      font-size: 0.9em;
+}
 `;
 
 export const Button = styled("div")`
   width: auto;
   padding-right: 3rem;
+  
   & .more {
     width: fit-content;
     background-color: ${({ theme }) => theme.palette.primary.main};
@@ -45,6 +53,10 @@ export const Button = styled("div")`
     padding: 1rem 4rem;
     color: #fff;
     border: solid 1px;
+    @media (max-width: ${({theme})=> getMaxBreakPoint(theme, 'sm')}) {
+      font-size: 0.8em;
+      padding: 1rem 2rem;
+}
     &:hover {
       cursor: pointer;
       color: ${({ theme }) => theme.palette.primary.main};
@@ -58,6 +70,7 @@ export const BlankSpace = styled("div")`
   background-color: #fff;
   width: 100%;
   height: 5vh;
+  
 `;
 
 export const MainCardContainer = styled("div")`
@@ -66,6 +79,9 @@ export const MainCardContainer = styled("div")`
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  @media (max-width: ${({theme})=> getMaxBreakPoint(theme, 'sm')}) {
+    grid-template-columns: repeat(1, 1fr);
+}
 `;
 export const CardContainer = styled("div")`
   width: 70%;
@@ -99,4 +115,7 @@ export const CardBackground = styled("div")`
   width: 100%;
   height: 110vh;
   background-color: rgba(63, 92, 110, 0.18);
+  @media (max-width: ${({theme})=> getMaxBreakPoint(theme, 'sm')}) {
+    height: 130vh;
+}
 `;

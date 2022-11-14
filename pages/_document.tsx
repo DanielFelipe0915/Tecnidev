@@ -2,13 +2,19 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 import createEmotionServer from "@emotion/server/create-instance";
 import theme from "../src/theme";
 import createEmotionCache from "../src/config/cache/createEmotionCache";
-import { fontFamily } from '@mui/system';
+
 
 export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="es">
-        <Head>            
+        
+        <Head>    
+        <link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+/>        
+        
 <meta name="theme-color" content={theme.palette.primary.main}/>
 
           {(this.props as any).emotionStyleTags}

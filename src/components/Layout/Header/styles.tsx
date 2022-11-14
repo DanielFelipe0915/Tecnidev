@@ -1,10 +1,11 @@
 import { styled } from "@mui/material";
+import { getMaxBreakPoint } from "../../../utils/StyledUtil";
 
 export const Header = styled("div")`
   width: 100%;
   background-color: #fff;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   
 `;
@@ -70,4 +71,41 @@ export const Title = styled("p")`
   font-style: normal;
   font-weight: 700;
   margin:2rem 0 ;
+`;
+
+export const MenuBar= styled('div')`
+display: none;
+margin-right:0;
+@media (max-width: ${({theme})=> getMaxBreakPoint(theme, 'sm')}) {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+`
+export const TradeMark= styled('div')`
+  display: flex;
+  align-items: center;
+
+`;
+
+export const ButtonSpace= styled('div')`
+  display: flex;
+  align-self: flex-end;
+`;
+
+
+export const MenuDesktop= styled('div')`
+margin-right:0;
+@media (max-width: ${({theme})=> getMaxBreakPoint(theme, 'sm')}) {
+  display: none;
+}
+`
+export const MenuI= styled('div')`
+width: auto;
+  & .icon{
+    color:#505050;
+    margin-right: 0.5rem;
+}
+
 `;
