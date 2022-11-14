@@ -64,8 +64,8 @@ const HeaderComponent = () => {
             <Link href="/plans">
             <MenuI> <MenuItem onClick={handleClose}><ElectricalServicesIcon className="icon"/>SERVICIOS</MenuItem></MenuI>
             </Link>
-            <Link href="/">
-            <MenuI> <MenuItem onClick={handleClose}><ContactPageIcon className="icon"/>CONTACTO</MenuItem></MenuI>
+            <Link href="/about">
+            <MenuI> <MenuItem onClick={handleClose}><ContactPageIcon className="icon"/>NOSOTROS</MenuItem></MenuI>
             </Link>
           </Menu>
           </ButtonSpace>
@@ -82,8 +82,8 @@ const HeaderComponent = () => {
           <Link href="/plans">
           <ItemMenu>SERVICIOS</ItemMenu>
           </Link>
-          <Link href="/">
-          <ItemContact>CONTACTO</ItemContact>
+          <Link href="/about">
+          <ItemContact>NOSOTROS</ItemContact>
           </Link>
         </Navigation>
         </MenuDesktop>

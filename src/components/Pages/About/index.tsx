@@ -1,5 +1,5 @@
 import LayoutComponent from "../../Layout";
-import { Left, Left2, Right, WrapperStyles, Left3, Right2 } from './styles';
+import { Left, Left2, Right, WrapperStyles, Left3, Right2, WrapperStyles2 } from './styles';
 
 const AboutComponent = () => {
   return (
@@ -29,7 +29,7 @@ const AboutComponent = () => {
           </Right>
         </WrapperStyles>
 
-        <WrapperStyles>
+        <WrapperStyles2>
           <Right>
             <h3 className="title">Mision</h3>
             <p className="content">
@@ -49,7 +49,7 @@ const AboutComponent = () => {
           </Right>
 
           <Left2></Left2>
-        </WrapperStyles>
+        </WrapperStyles2>
 
         <WrapperStyles>
           <Left3></Left3>

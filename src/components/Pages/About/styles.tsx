@@ -1,9 +1,22 @@
 import { styled } from '@mui/material';
+import { getMaxBreakPoint } from '../../../utils/StyledUtil';
 
 export const WrapperStyles=styled('div')`
 display: flex;
 box-sizing: border-box;
 width: 100%;
+@media (max-width: ${({theme})=> getMaxBreakPoint(theme, 'sm')}) {
+  flex-direction: column;
+}
+`
+
+export const WrapperStyles2=styled('div')`
+display: flex;
+box-sizing: border-box;
+width: 100%;
+@media (max-width: ${({theme})=> getMaxBreakPoint(theme, 'sm')}) {
+  flex-direction:column-reverse;
+}
 `
 
 export const Left=styled('div')`
@@ -13,6 +26,10 @@ background-image: url("/static/img/about/Rectangle.png");
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
+@media (max-width: ${({theme})=> getMaxBreakPoint(theme, 'sm')}) {
+  width:100%;
+  height: calc(40vh);
+}
 `
 
 export const Right=styled('div')`
@@ -25,12 +42,23 @@ align-items: center;
 text-align: center;
 color:#FFF;
 padding: 0 8rem;
+@media (max-width: ${({theme})=> getMaxBreakPoint(theme, 'sm')}) {
+  width:100%;
+  padding: 0 2rem;
+}
 & .title{
     font-size: 3em;
    margin-top: 0;
+   @media (max-width: ${({theme})=> getMaxBreakPoint(theme, 'sm')}) {
+  margin-top: 0.5rem;
+  font-size: 2em;
+}
 }
 & .content{
     line-height:2.3rem;
+    @media (max-width: ${({theme})=> getMaxBreakPoint(theme, 'sm')}) {
+  font-size: 0.8em;
+}
 }
 `
 
@@ -41,6 +69,10 @@ background-image: url("/static/img/about/tecnologia.png");
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
+@media (max-width: ${({theme})=> getMaxBreakPoint(theme, 'sm')}) {
+  width:100%;
+  height: calc(40vh);
+}
 `
 
 
@@ -51,6 +83,10 @@ background-image: url("/static/img/about/robot.png");
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
+@media (max-width: ${({theme})=> getMaxBreakPoint(theme, 'sm')}) {
+  width:100%;
+  height: calc(40vh);
+}
 `
 
 
@@ -63,11 +99,22 @@ justify-content: center;
 align-items: center;
 color:#FFF;
 padding: 0 8rem;
+@media (max-width: ${({theme})=> getMaxBreakPoint(theme, 'sm')}) {
+  width:100%;
+  padding: 0 2rem;
+}
 & .title{
     font-size: 3em;
    margin-top: 0;
+   @media (max-width: ${({theme})=> getMaxBreakPoint(theme, 'sm')}) {
+  margin-top: 0.5rem;
+  font-size: 2em;
+}
 }
 & .content{
     line-height:2.3rem;
+    @media (max-width: ${({theme})=> getMaxBreakPoint(theme, 'sm')}) {
+  font-size: 0.8em;
+}
 }
 `
